@@ -1,0 +1,252 @@
+/* FONTS USED */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+/* COLOR AND FONT VARS */
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 47%, 52%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+    
+    --main-font: 'Karla', sans-serif;
+}
+
+
+/* GENERAL STYLE */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+}
+
+
+/* Header */
+header .body-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* Main */
+.container {
+    min-height: 100%;
+}
+
+.container .card {
+    width: 312px;
+    height: auto;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px -11px #4BBEBC;
+    -webkit-box-shadow: 0px 0px 20px -11px #4BBEBC; 
+    -moz-box-shadow: 0px 0px 20px -11px #4BBEBC; 
+}
+
+.sections {
+    padding: 26px 24px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: var(--white);
+}
+
+.sections h3 {
+    margin: 0 auto 22px auto;
+}
+
+.sections p {
+    font-size: 14px;
+}
+
+/* section one */
+.section-one {
+    background-color: var(--white);
+    border-radius: 7px 7px 0 0;
+}
+
+.section-one h3 {
+    color: var(--cyan);
+    font-size: 20px;
+}
+
+.section-one h4 {
+    color: var(--bright-yellow);
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+.section-one p {
+    color:var(--grayish-blue);
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    font-size: 13px;
+}
+
+/* section two */
+.section-two {
+    background-color: var(--cyan);
+    font-weight: 400;
+}
+
+.section-two h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.section-two .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-two .price :nth-child(1) {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.section-two .price :nth-child(2) {
+    font-size: 16px;
+    color: var(--light-gray);
+}
+
+.section-two .price-details {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.section-two .sign-up {
+    width: 265px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bright-yellow);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: var(--main-font);
+    box-shadow: 0 0.5px 10px 1.5px #7e7e7e;
+    -webkit-box-shadow: 0 0.5px 10px 1.5px #7e7e7e;
+    -moz-box-shadow: 0 0.5px 10px 1.5px #7e7e7e;
+}
+
+/* section three */
+.section-three {
+    background-color:var(--light-cyan);
+    border-radius: 0 0 5px 5px;
+}
+
+.section-three p {
+    font-weight: 400;
+    white-space: pre-line;
+    line-height: 20px;
+    color: var(--light-gray);
+}
+
+
+/* Footer */
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    width: 100vw;
+    height: 30px;
+    margin: 15px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* MEDIA QUERY */
+@media (min-width: 800px) {
+
+    /* General -> Card */
+    .sections {
+        padding: 38px 37px;
+    }
+
+    .container .card {  
+        width: 636px;
+        height: 474px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "section-one section-one"
+          "section-two section-three";
+    }
+     
+    /* section one */
+    .section-one { 
+        grid-area: section-one;
+    }
+
+    .section-one h3 {
+        font-size: 24px;
+    }
+
+    .section-one h4 {
+        font-size: 18px;
+        margin: 25px auto 10px auto;
+    }
+
+    .section-one p {
+        font-size: 15.5px;
+    }
+
+    /* section two */
+    .section-two { 
+        grid-area: section-two; 
+        border-bottom-left-radius: 7px;
+    }
+
+    .section-two h3 {
+        font-size: 18px;
+    }
+
+    .section-two .price {
+        margin-bottom: 8px;
+    }
+
+    .section-two .price-details {
+        font-size: 16px;
+    }
+
+    .section-two .sign-up {
+        width: 238px;
+    }
+
+    /* section three */
+    .section-three { 
+        grid-area: section-three;
+        border-radius: 0 0 7px 0;
+    }
+    
+}
+
+@media (min-width: 1367px) {
+
+    /* General -> Card */
+    header .body-title {
+        margin-top: 120px;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+}
