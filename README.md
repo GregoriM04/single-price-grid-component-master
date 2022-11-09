@@ -35,7 +35,7 @@ Below you'll see a screenshot of the final result on desktop view.
 ### Links
 
 - Repository: [Click here to check it out](https://github.com/GregoriM04/single-price-grid-component-master.git)
-- Live Site URL: [Click here to check it out](https://)
+- Live Site URL: [Click here to check it out](https://gregorim04.github.io/single-price-grid-component-master/)
 
 
 ## My process
